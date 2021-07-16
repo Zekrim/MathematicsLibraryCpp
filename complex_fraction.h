@@ -51,6 +51,138 @@ class complex_fraction
       }
       return real_part.to_string() + "+" + imaginary_part.to_string() + "i";
     }
+    
+    /*
+     * Returns the sum of the complex number and a real whole number.
+     */
+    complex_fraction operator+(long long x)
+    {
+      return complex_fraction(real_part + x, imaginary_part);
+    }
+
+    /*
+     * Returns the difference of the complex number and a real whole number.
+     */
+    complex_fraction operator-(long long x)
+    {
+      return complex_fraction(real_part - x, imaginary_part);
+    }
+
+    /*
+     * Returns the product of the complex number and a real whole number.
+     */
+    complex_fraction operator*(long long x)
+    {
+      return complex_fraction(real_part * x, imaginary_part * x);
+    }
+
+    /*
+     * Returns the quotient of the complex number and a real whole number.
+     */
+    complex_fraction operator/(long long x)
+    {
+      return complex_fraction(real_part / x, imaginary_part / x);
+    }
+
+    /*
+     * Takes the current complex number and adds a real whole number to it.
+     */
+    void operator+=(long long x)
+    {
+      real_part += x;
+    }
+
+    /*
+     * Takes the current complex number and divides a real whole number from it.
+     */
+    void operator-=(long long x)
+    {
+      real_part -= x;
+    }
+
+    /*
+     * Takes the current complex number and multiplies the real and imaginary elements by a real whole number.
+     */
+    void operator*=(long long x)
+    {
+      real_part *= x;
+      imaginary_part *= x;
+    }
+
+    /*
+     * Takes the current complex number and divides the real and imaginary elements by a real whole number.
+     */
+    void operator/=(long long x)
+    {
+      real_part /= x;
+      imaginary_part /= x;
+    }
+
+    /*
+     * Returns the sum of the complex number and a real fraction.
+     */
+    complex_fraction operator+(fraction x)
+    {
+      return complex_fraction(real_part + x, imaginary_part);
+    }
+
+    /*
+     * Returns the difference of the complex number and a real fraction.
+     */
+    complex_fraction operator-(fraction x)
+    {
+      return complex_fraction(real_part - x, imaginary_part);
+    }
+
+    /*
+     * Returns the product of a complex number and a real whole number.
+     */
+    complex_fraction operator*(fraction x)
+    {
+      return complex_fraction(real_part * x, imaginary_part * x);
+    }
+
+    /*
+     * Returns the quotient of a complex number and a real whole number.
+     */
+    complex_fraction operator/(fraction x)
+    {
+      return complex_fraction(real_part / x, imaginary_part / x);
+    }
+
+    /*
+     * Takes the current number and adds a real fraction to it.
+     */
+    void operator+=(fraction x)
+    {
+      real_part += x;
+    }
+
+    /*
+     * Takes the current number and subtracts a real fraction from it.
+     */
+    void operator-=(fraction x)
+    {
+      real_part -= x;
+    }
+
+    /*
+     * Takes the current number and multiplies it by a real fraction.
+     */
+    void operator*=(fraction x)
+    {
+      real_part *= x;
+      imaginary_part *= x;
+    }
+
+    /*
+     * Takes the current number and divides it by a real fraction.
+     */
+    void operator/=(fraction x)
+    {
+      real_part /= x;
+      imaginary_part /= x;
+    }
 
     /*
      * Returns the sum of the current complex number and another complex number.
